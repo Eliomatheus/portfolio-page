@@ -18,17 +18,17 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   description,
   icon
 }) => (
-  <Card className="relative border border-gray-100 hover:shadow-md transition-shadow">
+  <Card className="relative border border-green-900/20 hover:shadow-md transition-shadow bg-black/30">
     <CardContent className="p-6">
       <div className="flex items-start gap-4">
-        <div className="bg-portfolio-purple/10 w-12 h-12 flex items-center justify-center rounded-lg shrink-0">
+        <div className="bg-green-900/20 w-12 h-12 flex items-center justify-center rounded-lg shrink-0">
           {icon}
         </div>
         <div>
-          <span className="text-sm font-medium text-portfolio-purple">{year}</span>
-          <h3 className="text-xl font-semibold mt-1">{title}</h3>
-          <p className="text-gray-700 font-medium">{organization}</p>
-          <p className="text-gray-600 mt-2">{description}</p>
+          <span className="text-sm font-medium text-green-500">{year}</span>
+          <h3 className="text-xl font-semibold mt-1 text-white">{title}</h3>
+          <p className="text-gray-300 font-medium">{organization}</p>
+          <p className="text-gray-400 mt-2">{description}</p>
         </div>
       </div>
     </CardContent>
@@ -38,66 +38,52 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 const Experience: React.FC = () => {
   const workExperience = [
     {
-      year: "2021 - Present",
-      title: "Senior Full Stack Developer",
-      organization: "Company XYZ",
-      description: "Led the development of a scalable e-commerce platform handling thousands of daily transactions. Implemented CI/CD pipelines and mentored junior developers.",
-      icon: <Briefcase className="text-portfolio-purple" size={24} />
+      year: "Dez de 2021 - Presente (3 anos 6 meses)",
+      title: "Técnico de Suporte em TI",
+      organization: "Forno Mania - Tempo integral",
+      description: "Atendimento a usuários presencialmente e remotamente. Monitoramento do sistema ERP TOTVS PROTHEUS e sistema SFA/CRM. Criação de customizações para agilizar processos, manutenção de hardware e software, e análise da infraestrutura para futuras melhorias.",
+      icon: <Briefcase className="text-green-500" size={24} />
     },
     {
-      year: "2019 - 2021",
-      title: "Full Stack Developer",
-      organization: "Startup ABC",
-      description: "Built a real-time chat application using React, Node.js, and Socket.io. Improved website performance by 40% through code optimization.",
-      icon: <Briefcase className="text-portfolio-purple" size={24} />
-    },
-    {
-      year: "2017 - 2019",
-      title: "Frontend Developer",
-      organization: "Tech Solutions Inc.",
-      description: "Developed responsive web applications using React and Redux. Collaborated with design team to implement UI/UX improvements.",
-      icon: <Briefcase className="text-portfolio-purple" size={24} />
+      year: "Jul de 2017 - Jul de 2021 (4 anos 1 mês)",
+      title: "Operador de Loja 2",
+      organization: "Villefort Atacarejo - Tempo integral",
+      description: "Abastecimento de mercadorias e controle de validades (PEPS). Acompanhamento de relatórios de vendas e planejamento de estratégias para aumentar a venda de produtos com baixa performance semanal.",
+      icon: <Briefcase className="text-green-500" size={24} />
     }
   ];
 
   const education = [
     {
-      year: "2013 - 2017",
-      title: "Bachelor's Degree in Computer Science",
-      organization: "Top University",
-      description: "Graduated with honors. Specialized in web development and algorithms. Completed capstone project on AI-powered web applications.",
-      icon: <GraduationCap className="text-portfolio-purple" size={24} />
-    },
-    {
-      year: "2020",
-      title: "Advanced Web Development Certification",
-      organization: "Web Academy",
-      description: "Mastered advanced concepts in modern web development including React, Node.js, and cloud deployment strategies.",
-      icon: <GraduationCap className="text-portfolio-purple" size={24} />
+      year: "16/05/2021 - 21/06/2023",
+      title: "Superior de Tecnologia em Análise e Desenvolvimento de Sistemas",
+      organization: "Universidade Pitágoras Unopar Anhanguera",
+      description: "Formação completa em Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento web e soluções digitais.",
+      icon: <GraduationCap className="text-green-500" size={24} />
     }
   ];
 
   return (
-    <section id="experience" className="section-padding bg-gray-50">
+    <section id="experience" className="section-padding bg-black/50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h6 className="text-sm font-semibold text-portfolio-purple mb-2 uppercase tracking-wider">
-            Resume
+          <h6 className="text-sm font-semibold text-green-500 mb-2 uppercase tracking-wider">
+            Currículo
           </h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Experience & Education
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Experiência & Formação
           </h2>
-          <p className="text-gray-600">
-            A timeline of my professional journey and educational background
-            in the field of web development and software engineering.
+          <p className="text-gray-400">
+            Uma linha do tempo da minha jornada profissional e formação
+            acadêmica na área de tecnologia e desenvolvimento de software.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center">
-              <Briefcase className="mr-2 text-portfolio-purple" size={20} />
-              Work Experience
+            <h3 className="text-2xl font-bold mb-6 flex items-center text-white">
+              <Briefcase className="mr-2 text-green-500" size={20} />
+              Experiência Profissional
             </h3>
             <div className="space-y-6">
               {workExperience.map((item, index) => (
@@ -107,9 +93,9 @@ const Experience: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center">
-              <GraduationCap className="mr-2 text-portfolio-purple" size={20} />
-              Education
+            <h3 className="text-2xl font-bold mb-6 flex items-center text-white">
+              <GraduationCap className="mr-2 text-green-500" size={20} />
+              Formação Acadêmica
             </h3>
             <div className="space-y-6">
               {education.map((item, index) => (

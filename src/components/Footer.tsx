@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-portfolio-black text-white py-12">
+    <footer className="bg-black text-white py-12 border-t border-green-900/20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-4 md:mb-0">
@@ -20,21 +20,21 @@ const Footer: React.FC = () => {
           
           <button 
             onClick={scrollToTop}
-            className="bg-portfolio-green/20 hover:bg-portfolio-green/30 text-white p-3 rounded-full transition-colors"
+            className="bg-green-500/20 hover:bg-green-500/30 text-white p-3 rounded-full transition-colors"
           >
             <ArrowUp size={20} />
           </button>
         </div>
         
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between">
+        <div className="border-t border-green-900/20 pt-8 flex flex-col md:flex-row justify-between">
           <p className="text-gray-400 mb-4 md:mb-0">
             © {currentYear} Elio Matheus. Todos os direitos reservados.
           </p>
           
           <div className="flex space-x-6">
-            <a href="https://www.linkedin.com/in/eliomatheus/" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/Eliomatheus" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:eliomatheus8@gmail.com" className="text-gray-400 hover:text-white transition-colors">Email</a>
+            <a href="https://www.linkedin.com/in/eliomatheus/" className="text-gray-400 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Eliomatheus" className="text-gray-400 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:eliomatheus8@gmail.com" className="text-gray-400 hover:text-green-400 transition-colors">Email</a>
           </div>
         </div>
       </div>
