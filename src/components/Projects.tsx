@@ -22,18 +22,18 @@ const ProjectCard: React.FC<ProjectProps> = ({
   demo,
   github
 }) => (
-  <Card className="overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
-    <div className="h-52 overflow-hidden bg-gray-100">
+  <Card className="overflow-hidden border-muted bg-card hover:shadow-lg transition-shadow">
+    <div className="h-52 overflow-hidden bg-muted">
       <div className={`w-full h-full bg-gradient-to-br ${image} flex items-center justify-center`}>
-        <span className="text-3xl font-bold text-white opacity-30">{title}</span>
+        <span className="text-3xl font-bold text-foreground/30">{title}</span>
       </div>
     </div>
     <CardContent className="p-6">
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <h3 className="text-xl font-bold mb-2 text-foreground">{title}</h3>
+      <p className="text-muted-foreground mb-4">{description}</p>
       <div className="flex flex-wrap gap-2 mb-4">
         {tags.map((tag, index) => (
-          <Badge key={index} variant="secondary" className="bg-gray-100">
+          <Badge key={index} variant="secondary" className="bg-muted text-muted-foreground">
             {tag}
           </Badge>
         ))}
@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         {demo && (
           <Button 
             variant="default" 
-            className="gap-2 bg-portfolio-green hover:bg-portfolio-green/90"
+            className="gap-2"
             asChild
           >
             <a href={demo} target="_blank" rel="noopener noreferrer">
@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         {github && (
           <Button 
             variant="outline" 
-            className="gap-2 border-gray-300"
+            className="gap-2 border-muted"
             asChild
           >
             <a href={github} target="_blank" rel="noopener noreferrer">
@@ -79,16 +79,16 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-white">
+    <section id="projects" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h6 className="text-sm font-semibold text-portfolio-green mb-2 uppercase tracking-wider">
+          <h6 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
             Portfólio
           </h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Projetos em Destaque
           </h2>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             Explore uma seleção dos meus projetos recentes de desenvolvimento web e mobile.
             Cada projeto demonstra diferentes habilidades e tecnologias.
           </p>

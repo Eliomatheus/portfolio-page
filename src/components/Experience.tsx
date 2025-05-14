@@ -18,17 +18,17 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   description,
   icon
 }) => (
-  <Card className="relative border border-green-900/20 hover:shadow-md transition-shadow bg-black/30">
+  <Card className="relative border-muted bg-card hover:shadow-md transition-shadow">
     <CardContent className="p-6">
       <div className="flex items-start gap-4">
-        <div className="bg-green-900/20 w-12 h-12 flex items-center justify-center rounded-lg shrink-0">
+        <div className="bg-primary/10 w-12 h-12 flex items-center justify-center rounded-lg shrink-0">
           {icon}
         </div>
         <div>
-          <span className="text-sm font-medium text-green-500">{year}</span>
-          <h3 className="text-xl font-semibold mt-1 text-white">{title}</h3>
-          <p className="text-gray-300 font-medium">{organization}</p>
-          <p className="text-gray-400 mt-2">{description}</p>
+          <span className="text-sm font-medium text-primary">{year}</span>
+          <h3 className="text-xl font-semibold mt-1 text-foreground">{title}</h3>
+          <p className="text-foreground/80 font-medium">{organization}</p>
+          <p className="text-muted-foreground mt-2">{description}</p>
         </div>
       </div>
     </CardContent>
@@ -64,16 +64,16 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-black/50">
+    <section id="experience" className="section-padding bg-muted">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h6 className="text-sm font-semibold text-green-500 mb-2 uppercase tracking-wider">
+          <h6 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
             Currículo
           </h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Experiência & Formação
           </h2>
-          <p className="text-gray-400">
+          <p className="text-muted-foreground">
             Uma linha do tempo da minha jornada profissional e formação
             acadêmica na área de tecnologia e desenvolvimento de software.
           </p>
@@ -81,8 +81,8 @@ const Experience: React.FC = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center text-white">
-              <Briefcase className="mr-2 text-green-500" size={20} />
+            <h3 className="text-2xl font-bold mb-6 flex items-center text-foreground">
+              <Briefcase className="mr-2 text-primary" size={20} />
               Experiência Profissional
             </h3>
             <div className="space-y-6">
@@ -93,8 +93,8 @@ const Experience: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center text-white">
-              <GraduationCap className="mr-2 text-green-500" size={20} />
+            <h3 className="text-2xl font-bold mb-6 flex items-center text-foreground">
+              <GraduationCap className="mr-2 text-primary" size={20} />
               Formação Acadêmica
             </h3>
             <div className="space-y-6">

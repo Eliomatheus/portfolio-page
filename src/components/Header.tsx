@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -31,7 +30,7 @@ const Header: React.FC = () => {
     <header 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4',
-        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-card/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -44,31 +43,31 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex space-x-6">
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-gray-700 hover:text-portfolio-green transition-colors"
+            className="text-foreground hover:text-primary transition-colors"
           >
             Sobre
           </button>
           <button 
             onClick={() => scrollToSection('skills')}
-            className="text-gray-700 hover:text-portfolio-green transition-colors"
+            className="text-foreground hover:text-primary transition-colors"
           >
             Habilidades
           </button>
           <button 
             onClick={() => scrollToSection('experience')}
-            className="text-gray-700 hover:text-portfolio-green transition-colors"
+            className="text-foreground hover:text-primary transition-colors"
           >
             Experiência
           </button>
           <button 
             onClick={() => scrollToSection('projects')}
-            className="text-gray-700 hover:text-portfolio-green transition-colors"
+            className="text-foreground hover:text-primary transition-colors"
           >
             Projetos
           </button>
           <Button 
             onClick={() => scrollToSection('contact')}
-            className="bg-portfolio-green hover:bg-portfolio-green/90"
+            className="bg-primary hover:bg-primary/90"
           >
             Contato
           </Button>
@@ -76,7 +75,7 @@ const Header: React.FC = () => {
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-gray-700"
+          className="md:hidden text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -85,35 +84,35 @@ const Header: React.FC = () => {
       
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-card shadow-md">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-portfolio-green py-2 transition-colors"
+              className="text-foreground hover:text-primary py-2 transition-colors"
             >
               Sobre
             </button>
             <button 
               onClick={() => scrollToSection('skills')}
-              className="text-gray-700 hover:text-portfolio-green py-2 transition-colors"
+              className="text-foreground hover:text-primary py-2 transition-colors"
             >
               Habilidades
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
-              className="text-gray-700 hover:text-portfolio-green py-2 transition-colors"
+              className="text-foreground hover:text-primary py-2 transition-colors"
             >
               Experiência
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
-              className="text-gray-700 hover:text-portfolio-green py-2 transition-colors"
+              className="text-foreground hover:text-primary py-2 transition-colors"
             >
               Projetos
             </button>
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-portfolio-green hover:bg-portfolio-green/90 w-full"
+              className="bg-primary hover:bg-primary/90 w-full"
             >
               Contato
             </Button>

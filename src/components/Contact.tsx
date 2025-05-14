@@ -43,19 +43,19 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     { 
-      icon: <Mail className="text-portfolio-green" size={24} />, 
+      icon: <Mail className="text-primary" size={24} />, 
       title: "Email", 
       value: "eliomatheus8@gmail.com",
       link: "mailto:eliomatheus8@gmail.com" 
     },
     { 
-      icon: <Phone className="text-portfolio-green" size={24} />, 
+      icon: <Phone className="text-primary" size={24} />, 
       title: "Telefone", 
       value: "(+55) 1234-5678",
       link: "tel:+551234-5678" 
     },
     { 
-      icon: <MapPin className="text-portfolio-green" size={24} />, 
+      icon: <MapPin className="text-primary" size={24} />, 
       title: "Localização", 
       value: "São Paulo, SP",
       link: "https://maps.google.com/?q=São+Paulo,+SP" 
@@ -63,16 +63,16 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h6 className="text-sm font-semibold text-portfolio-green mb-2 uppercase tracking-wider">
+          <h6 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
             Entre em Contato
           </h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Vamos Conversar
           </h2>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             Interessado em trabalharmos juntos? Preencha o formulário abaixo com algumas informações
             sobre seu projeto, e entrarei em contato o mais breve possível.
           </p>
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">
                     Nome
                   </label>
                   <Input 
@@ -93,10 +93,11 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    className="bg-card border-muted"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
                     Email
                   </label>
                   <Input 
@@ -107,11 +108,12 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    className="bg-card border-muted"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-1">
                   Assunto
                 </label>
                 <Input 
@@ -121,10 +123,11 @@ const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
+                  className="bg-card border-muted"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">
                   Mensagem
                 </label>
                 <Textarea 
@@ -135,11 +138,12 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   rows={6}
                   required
+                  className="bg-card border-muted"
                 />
               </div>
               <Button 
                 type="submit" 
-                className="bg-portfolio-green hover:bg-portfolio-green/90 gap-2 w-full md:w-auto"
+                className="gap-2 w-full md:w-auto"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'} <Send size={16} />
@@ -148,8 +152,8 @@ const Contact: React.FC = () => {
           </div>
           
           <div>
-            <div className="bg-gray-50 p-6 rounded-lg h-full">
-              <h3 className="text-xl font-bold mb-6">Informações de Contato</h3>
+            <div className="bg-card p-6 rounded-lg h-full border border-muted">
+              <h3 className="text-xl font-bold mb-6 text-foreground">Informações de Contato</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <a 
@@ -157,37 +161,37 @@ const Contact: React.FC = () => {
                     key={index}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-start gap-4 hover:text-portfolio-green transition-colors"
+                    className="flex items-start gap-4 hover:text-primary transition-colors"
                   >
-                    <div className="bg-white p-2 rounded-lg shadow-sm">
+                    <div className="bg-muted p-2 rounded-lg shadow-sm">
                       {info.icon}
                     </div>
                     <div>
-                      <h4 className="font-medium">{info.title}</h4>
-                      <p className="text-gray-600">{info.value}</p>
+                      <h4 className="font-medium text-foreground">{info.title}</h4>
+                      <p className="text-muted-foreground">{info.value}</p>
                     </div>
                   </a>
                 ))}
               </div>
               
               <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">Conecte-se Comigo</h3>
+                <h3 className="text-xl font-bold mb-4 text-foreground">Conecte-se Comigo</h3>
                 <div className="flex gap-4">
                   <a 
                     href="https://www.linkedin.com/in/eliomatheus/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white p-3 rounded-full shadow-sm hover:bg-portfolio-green/10 transition-colors"
+                    className="bg-muted p-3 rounded-full shadow-sm hover:bg-primary/10 transition-colors"
                   >
-                    <Linkedin className="text-portfolio-green" size={20} />
+                    <Linkedin className="text-primary" size={20} />
                   </a>
                   <a 
                     href="https://github.com/Eliomatheus" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white p-3 rounded-full shadow-sm hover:bg-portfolio-green/10 transition-colors"
+                    className="bg-muted p-3 rounded-full shadow-sm hover:bg-primary/10 transition-colors"
                   >
-                    <Github className="text-portfolio-green" size={20} />
+                    <Github className="text-primary" size={20} />
                   </a>
                 </div>
               </div>

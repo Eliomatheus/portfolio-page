@@ -2,6 +2,7 @@ import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Code, Server, Database, Settings, Cloud, Globe } from 'lucide-react';
+
 const SkillCategory: React.FC<{
   icon: React.ReactNode;
   title: string;
@@ -14,19 +15,24 @@ const SkillCategory: React.FC<{
   skills,
   iconBgColor,
   iconColor
-}) => <Card className="overflow-hidden border border-gray-100 hover:shadow-md transition-shadow">
+}) => (
+  <Card className="overflow-hidden border-muted bg-card hover:shadow-md transition-shadow">
     <CardContent className="p-6">
       <div className={`mb-4 ${iconBgColor} w-12 h-12 flex items-center justify-center rounded-lg`}>
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => <Badge key={index} variant="outline" className="bg-gray-50 text-gray-700 border-gray-200 py-1">
+        {skills.map((skill, index) => (
+          <Badge key={index} variant="outline" className="bg-muted text-foreground border-muted-foreground py-1">
             {skill}
-          </Badge>)}
+          </Badge>
+        ))}
       </div>
     </CardContent>
-  </Card>;
+  </Card>
+);
+
 const Skills: React.FC = () => {
   const skillCategories = [{
     icon: <Code className="text-blue-500" size={24} />,
@@ -65,18 +71,29 @@ const Skills: React.FC = () => {
     iconBgColor: "bg-rose-500/10",
     iconColor: "text-rose-500"
   }];
-  return <section id="skills" className="section-padding bg-gray-50">
+  return (
+    <section id="skills" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Minhas Tecnologias</h2>
-          <p className="text-gray-600">Com um conjunto abrangente de habilidades que abrange tecnologias front-end e back-end, trago recursos full-stack para cada projeto.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Minhas Tecnologias</h2>
+          <p className="text-muted-foreground">Com um conjunto abrangente de habilidades que abrange tecnologias front-end e back-end, trago recursos full-stack para cada projeto.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => <SkillCategory key={index} icon={category.icon} title={category.title} skills={category.skills} iconBgColor={category.iconBgColor} iconColor={category.iconColor} />)}
+          {skillCategories.map((category, index) => (
+            <SkillCategory 
+              key={index} 
+              icon={category.icon} 
+              title={category.title} 
+              skills={category.skills} 
+              iconBgColor={category.iconBgColor} 
+              iconColor={category.iconColor} 
+            />
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Skills;
