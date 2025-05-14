@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { User, Briefcase, GraduationCap } from 'lucide-react';
-
 const About: React.FC = () => {
-  return (
-    <section id="about" className="section-padding bg-white">
+  return <section id="about" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h6 className="text-sm font-semibold text-portfolio-green mb-2 uppercase tracking-wider">
@@ -31,10 +28,7 @@ const About: React.FC = () => {
                 <User className="text-portfolio-green" size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-2">Profissional</h3>
-              <p className="text-gray-600">
-                Experiência em desenvolvimento de aplicações web e mobile, trabalhando com clientes 
-                desde startups até empresas de grande porte.
-              </p>
+              <p className="text-gray-600">Com base sólida em suporte técnico, monitoro o sistema ERP da TOTVS e ofereço suporte remoto, garantindo excelência operacional. Destaco-me pela comunicação eficaz e gestão de tempo, promovendo um atendimento eficiente e colaboração produtiva. Estou sempre disposto a conectar e colaborar em projetos que demandem inovação e criatividade.</p>
             </CardContent>
           </Card>
           
@@ -44,10 +38,7 @@ const About: React.FC = () => {
                 <Briefcase className="text-portfolio-green" size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-2">Experiente</h3>
-              <p className="text-gray-600">
-                Trabalho com diversas equipes e clientes para entregar soluções de alta qualidade que
-                atendam aos objetivos de negócios e excedam as expectativas dos usuários.
-              </p>
+              <p className="text-gray-600">Apaixonado por solucionar problemas com tecnologia, possuo amplo conhecimento em HTML, CSS, JavaScript, React, TypeScript e Node.js. Foco em criar soluções escaláveis e interfaces dinâmicas para experiências de usuário excepcionais. Desenvolvi o FSW-Barber, um site inovador de barbearia, para demonstrar minha capacidade de transformar conceitos em soluções práticas.</p>
             </CardContent>
           </Card>
           
@@ -57,16 +48,11 @@ const About: React.FC = () => {
                 <GraduationCap className="text-portfolio-green" size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-2">Educado</h3>
-              <p className="text-gray-600">
-                Formação em Desenvolvimento Web, com aprendizado contínuo através de cursos 
-                profissionais e certificações para estar sempre atualizado.
-              </p>
+              <p className="text-gray-600">Formado em  Análise e Desenvolvimento de Sistemas na Universidade Pitágoras Unopar Anhanguera , com aprendizado contínuo através de cursos profissionais e certificações para estar sempre atualizado.</p>
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
