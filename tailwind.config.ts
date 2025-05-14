@@ -64,9 +64,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				portfolio: {
-					purple: '#6E59A5',
-					'light-purple': '#E5DEFF',
-					'dark-purple': '#1A1F2C',
+					green: '#2E8B57',
+					'light-green': '#E0F5E9',
+					'dark-green': '#1A5D37',
+					black: '#121212',
 					gray: '#8E9196'
 				}
 			},

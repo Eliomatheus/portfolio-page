@@ -1,0 +1,9 @@
+
+{
+  "title": "FSW Barber",
+  "description": "Aplicação para agendamento de serviços de barbearia. Site otimizado para versão mobile, com otimização para desktop em desenvolvimento.",
+  "image": "from-portfolio-green/20 to-portfolio-black/20",
+  "tags": ["Next.js", "React.js", "PostgreSQL", "Tailwind CSS", "Prisma", "Node.js", "ShadCN", "TypeScript", "JavaScript"],
+  "demo": "https://fsw-barber-inky.vercel.app/",
+  "github": "https://github.com/Eliomatheus/fsw-barber"
+}

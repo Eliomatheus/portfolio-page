@@ -42,11 +42,11 @@ const ProjectCard: React.FC<ProjectProps> = ({
         {demo && (
           <Button 
             variant="default" 
-            className="gap-2 bg-portfolio-purple hover:bg-portfolio-purple/90"
+            className="gap-2 bg-portfolio-green hover:bg-portfolio-green/90"
             asChild
           >
             <a href={demo} target="_blank" rel="noopener noreferrer">
-              Live Demo <ArrowUpRight size={16} />
+              Ver Demo <ArrowUpRight size={16} />
             </a>
           </Button>
         )}
@@ -69,52 +69,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
 const Projects: React.FC = () => {
   const projects: ProjectProps[] = [
     {
-      title: "E-commerce Platform",
-      description: "A full-featured e-commerce platform with payment processing, user accounts, and an admin dashboard.",
-      image: "from-blue-500/20 to-purple-500/20",
-      tags: ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-      demo: "#",
-      github: "#"
-    },
-    {
-      title: "Social Media App",
-      description: "A modern social media application with real-time messaging, user profiles, and content sharing.",
-      image: "from-green-500/20 to-emerald-500/20",
-      tags: ["React", "Socket.io", "Express", "MongoDB", "JWT"],
-      demo: "#",
-      github: "#"
-    },
-    {
-      title: "Task Management System",
-      description: "A collaborative task management system with team workspaces and progress tracking.",
-      image: "from-amber-500/20 to-orange-500/20",
-      tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
-      demo: "#",
-      github: "#"
-    },
-    {
-      title: "Real Estate Listing Portal",
-      description: "A comprehensive real estate application with property listings, search, and user accounts.",
-      image: "from-cyan-500/20 to-blue-500/20",
-      tags: ["React", "Redux", "Express", "MongoDB", "Google Maps API"],
-      demo: "#",
-      github: "#"
-    },
-    {
-      title: "Portfolio Website Generator",
-      description: "A tool that helps developers create personalized portfolio websites with minimal effort.",
-      image: "from-purple-500/20 to-pink-500/20",
-      tags: ["React", "Next.js", "Tailwind CSS", "Vercel"],
-      demo: "#",
-      github: "#"
-    },
-    {
-      title: "Fitness Tracking App",
-      description: "A mobile-responsive fitness tracking application with workout plans and progress visualization.",
-      image: "from-red-500/20 to-rose-500/20",
-      tags: ["React Native", "Firebase", "Redux", "Chart.js"],
-      demo: "#",
-      github: "#"
+      title: "FSW Barber",
+      description: "Aplicação para agendamento de serviços de barbearia. Site otimizado para versão mobile, com otimização para desktop em desenvolvimento.",
+      image: "from-portfolio-green/20 to-portfolio-black/20",
+      tags: ["Next.js", "React.js", "PostgreSQL", "Tailwind CSS", "Prisma", "Node.js", "ShadCN", "TypeScript", "JavaScript"],
+      demo: "https://fsw-barber-inky.vercel.app/",
+      github: "https://github.com/Eliomatheus/fsw-barber"
     }
   ];
 
@@ -122,15 +82,15 @@ const Projects: React.FC = () => {
     <section id="projects" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h6 className="text-sm font-semibold text-portfolio-purple mb-2 uppercase tracking-wider">
-            Portfolio
+          <h6 className="text-sm font-semibold text-portfolio-green mb-2 uppercase tracking-wider">
+            Portfólio
           </h6>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Featured Projects
+            Projetos em Destaque
           </h2>
           <p className="text-gray-600">
-            Explore a selection of my recent web and mobile development projects.
-            Each project showcases different skills and technologies.
+            Explore uma seleção dos meus projetos recentes de desenvolvimento web e mobile.
+            Cada projeto demonstra diferentes habilidades e tecnologias.
           </p>
         </div>
         

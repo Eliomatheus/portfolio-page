@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 const Index = () => {
   // Update title
   React.useEffect(() => {
-    document.title = 'Portfolio | Full Stack Developer';
+    document.title = 'Elio Matheus | Desenvolvedor Full Stack';
   }, []);
 
   return (

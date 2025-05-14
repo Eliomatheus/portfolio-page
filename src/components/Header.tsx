@@ -37,40 +37,40 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="text-xl font-bold gradient-text">
-          Portifolio
+          Elio Matheus
         </a>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-gray-700 hover:text-portfolio-purple transition-colors"
+            className="text-gray-700 hover:text-portfolio-green transition-colors"
           >
-            About
+            Sobre
           </button>
           <button 
             onClick={() => scrollToSection('skills')}
-            className="text-gray-700 hover:text-portfolio-purple transition-colors"
+            className="text-gray-700 hover:text-portfolio-green transition-colors"
           >
-            Skills
+            Habilidades
           </button>
           <button 
             onClick={() => scrollToSection('experience')}
-            className="text-gray-700 hover:text-portfolio-purple transition-colors"
+            className="text-gray-700 hover:text-portfolio-green transition-colors"
           >
-            Experience
+            Experiência
           </button>
           <button 
             onClick={() => scrollToSection('projects')}
-            className="text-gray-700 hover:text-portfolio-purple transition-colors"
+            className="text-gray-700 hover:text-portfolio-green transition-colors"
           >
-            Projects
+            Projetos
           </button>
           <Button 
             onClick={() => scrollToSection('contact')}
-            className="bg-portfolio-purple hover:bg-portfolio-purple/90"
+            className="bg-portfolio-green hover:bg-portfolio-green/90"
           >
-            Contact Me
+            Contato
           </Button>
         </nav>
         
@@ -89,33 +89,33 @@ const Header: React.FC = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-portfolio-purple py-2 transition-colors"
+              className="text-gray-700 hover:text-portfolio-green py-2 transition-colors"
             >
-              About
+              Sobre
             </button>
             <button 
               onClick={() => scrollToSection('skills')}
-              className="text-gray-700 hover:text-portfolio-purple py-2 transition-colors"
+              className="text-gray-700 hover:text-portfolio-green py-2 transition-colors"
             >
-              Skills
+              Habilidades
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
-              className="text-gray-700 hover:text-portfolio-purple py-2 transition-colors"
+              className="text-gray-700 hover:text-portfolio-green py-2 transition-colors"
             >
-              Experience
+              Experiência
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
-              className="text-gray-700 hover:text-portfolio-purple py-2 transition-colors"
+              className="text-gray-700 hover:text-portfolio-green py-2 transition-colors"
             >
-              Projects
+              Projetos
             </button>
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-portfolio-purple hover:bg-portfolio-purple/90 w-full"
+              className="bg-portfolio-green hover:bg-portfolio-green/90 w-full"
             >
-              Contact Me
+              Contato
             </Button>
           </div>
         </div>
